@@ -1,0 +1,422 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+
+  --primary-color: #127703;
+  --accent-color: #E67E22;
+  --bg-light: #f4f4f9;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+/* HOME page */
+.main-header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.nav-links {
+    list-style: none; 
+    display: flex;    
+    gap: 1.5rem;     
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none; 
+    font-size: 1rem;
+    transition: color 0.3s ease; 
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-color);
+}
+
+.hero {
+    
+    background-image: url('https://img.freepik.com/free-photo/fresh-vegetables-fruit-market-stall_1101-2560.jpg?t=st=1770550455~exp=1770554055~hmac=49eeb4cb98b83659c84752d2f64a2dc9fc89a4dba650ae66e6bb3f2070e94e4b&w=2000');
+    background-size:100% 200%;  
+    height: 500px;   
+    background-repeat: no-repeat;        
+    
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.65); 
+    padding: 3rem 4rem;
+    text-align: center;
+    border-radius: 10px;
+    color: var(--text-light);
+
+  
+}
+
+.hero-overlay h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 30px; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #d35400; 
+}
+.categories {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.categories h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; 
+}
+.category-card {
+    background-color: var(--text-light);
+    padding: 2.5rem 1.5rem;
+    border-radius: 12px;
+    width: 280px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease; 
+}
+.category-card:hover {
+    transform: translateY(-10px); 
+}
+.category-card .icon {
+    font-size: 3rem; 
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.category-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.category-card p {
+    color: #777;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.link-text {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-text:hover {
+    text-decoration: underline;
+}
+/* Shop & Bakery  */
+
+.shop-section {
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+.breadcrumbs {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 2rem;
+}
+.breadcrumbs a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+.product-grid {
+    display: grid; 
+    
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+.product-card {
+    background-color: var(--text-light);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    position: relative; 
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-icon {
+    font-size: 5rem; 
+    margin-bottom: 1rem;
+}
+
+.badge {
+    position: absolute; 
+    top: 15px;          
+    left: 15px;         
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.badge-organic {
+    background-color: #3498db; 
+}
+
+.badge-sale {
+    background-color: #e74c3c; 
+}
+
+.price {
+    font-weight: bold;
+    color: var(--text-dark);
+    margin: 1rem 0;
+}
+.old-price {
+    text-decoration: line-through; 
+    color: #999;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+
+.btn-cart {
+    background-color: #27ae60; 
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    width: 100%; 
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-cart:hover {
+    background-color: #d35400;
+}
+
+/* Gallery Section */
+.gallery-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: -1.5rem; 
+    margin-bottom: 3rem; 
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer;
+}
+.gallery-img:hover {
+    transform: scale(1.03); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+/* Offers */
+
+
+.coupons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+    max-width: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.coupon-card {
+    display: flex; 
+    background-color: var(--text-light);
+    border-radius: 10px;
+}
+
+.coupon-badge {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 130px; 
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 8px; 
+    border-bottom-left-radius: 8px;
+}
+
+.coupon-badge .big-text {
+    font-size: 2rem;
+    line-height: 1.1;
+}
+
+.coupon-details {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+}
+
+.coupon-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.coupon-details p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.promo-code {
+    border: 2px solid; 
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 1.5px; 
+    display: inline-block;
+}
+
+.bg-green { background-color: #27ae60; }
+.text-green { 
+    color: #27ae60; 
+    border-color: #27ae60; 
+}
+
+.bg-orange { background-color: #e67e22; }
+.text-orange { 
+    color: #e67e22; 
+    border-color: #e67e22; 
+}
+
+.bg-blue { background-color: #3498db; }
+.text-blue { 
+    color: #3498db; 
+    border-color: #3498db; 
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 3rem 0;
+    background-color: var(--text-light);
+}
+.page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.btn-submit {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+/* About Section */
+.about-section {
+    padding: 3rem 0;
+    background-color: var(--text-light);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    border: 2px solid #127703;
+
+}
+.about-content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+/* Footer */
+.main-footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+}

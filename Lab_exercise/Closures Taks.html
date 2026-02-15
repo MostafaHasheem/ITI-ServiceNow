@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+function createSecret(initialMessage) {
+    let secret = initialMessage;
+
+    return {
+        updateMessage: function(newMessage) {
+            secret = newMessage;
+            console.log("Message updated.");
+        },
+        
+        deleteMessage: function() {
+            secret = null;
+            console.log("Message deleted.");
+        }
+    };
+}
+let mySecret = createSecret("2342qhgjkfhqk");
+
+mySecret.updateMessage("lkafjkljs"); 
+mySecret.deleteMessage();             
+
+</script>

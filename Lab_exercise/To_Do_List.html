@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To_DO_List</title>
+ 
+</head>
+<body>
+    <p id="taskCounter">Tasks: 0</p>
+    <div id="myDiv" class="header">
+        <h1>To Do List</h1>
+        <input type="text" name="taskInput" id="taskInput" placeholder="Add your task">
+        <button id="addTaskBtn">Add Task</button>
+  </div>   
+    <ul id="taskList">
+    </ul> 
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const addTaskBtn = document.getElementById("addTaskBtn");
+        const taskInput = document.getElementById("taskInput");
+        const taskList = document.getElementById("taskList");
+        const taskCounter = document.getElementById("taskCounter"); 
+
+        function updateCount() {
+            const count = taskList.children.length;
+            taskCounter.textContent = "Tasks: " + count;
+        }
+
+        addTaskBtn.addEventListener("click", function() {
+            const taskText = taskInput.value.trim();
+            
+            if (taskText !== "") {
+                const li = document.createElement("li");
+                
+                const textSpan = document.createElement("span");
+                textSpan.textContent = taskText;
+                
+                const deleteBtn = document.createElement("button");
+                deleteBtn.textContent = "Delete";
+                
+                deleteBtn.addEventListener("click", function() {
+                    li.remove();
+                    updateCount(); 
+                });
+
+                li.appendChild(textSpan);
+                li.appendChild(deleteBtn);
+                taskList.appendChild(li);
+                
+                updateCount(); 
+                
+                taskInput.value = "";
+            }
+        });
+    }); 
+</script>
+</html>

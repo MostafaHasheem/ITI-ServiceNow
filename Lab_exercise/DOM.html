@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<button id="myButton">Click me!</button>
+</head>
+<body>
+    <div id="elem1">Hello World</div>
+    <div id="elem2">Hello World</div>
+</body>
+
+</html>
+<script>
+    console.log("DOM manipulation example");
+    console.log("----------------------------")
+   btn = document.getElementById("myButton");
+   btn.addEventListener("click", function(event) {
+    alert(event.target.textContent);
+    document.addEventListener("DOMContentLoaded", function() {
+       setInterval(function() {
+           alert("DOM is fully loaded!");
+       }, 50000);    
+    });
+   });  
+    
+    
+
+  
+ 
+</script>
